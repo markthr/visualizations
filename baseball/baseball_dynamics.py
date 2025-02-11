@@ -73,15 +73,3 @@ def distance_quad_drag(g, C_d = 0.3, launch_angle = 27.5, exit_velocity = 100):
 
     return [M_TO_FT * x, M_TO_FT * y]
 
-# Simple no drag model
-delta_g = 0.002 # goal is to get a 1 foot difference
-print(f"No air resistance model, delta_g={delta_g}")
-print(distance_no_drag(9.8))
-print(distance_no_drag(9.8*(1+delta_g)))
-
-# Quadratic Drag Model
-delta_g = 0.005 # goal is to get a 1 foot difference
-print(f"Quadratic drag model, delta_g={delta_g}")
-print(distance_quad_drag(9.8))
-print(distance_quad_drag(9.8*(1+delta_g)))
-
